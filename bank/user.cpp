@@ -3,7 +3,7 @@
 
 user::user(QString loginUsername, QWidget *parent)
     : QWidget(parent)
-    , username(loginUsername.toStdString())
+    , username(loginUsername)
     , ui(new Ui::user)
 {
     ui->setupUi(this);
@@ -22,6 +22,21 @@ user::user(QString loginUsername, QWidget *parent)
     else
     {
         qDebug() << "user loaded succefully!";
+    }
+    if (!query.next())
+    {
+        qDebug() << query.lastError().text();
+    }
+    else
+    {
+        password = query.value(1).toString();
+        firstName = query.value(2).toString();
+        lastName = query.value(3).toString();
+        nationalCode = query.value(4).toString();
+        day = query.value(5).toInt();
+        month = query.value(6).toInt();
+        year = query.value(7).toInt();
+        qDebug() << "user profile loaded succefully!";
     }
 
 }

@@ -21,11 +21,11 @@ class user : public QWidget
     Q_OBJECT
 
 private:
-    string username;
-    string password;
-    string firstName;
-    string lastName;
-    string nationalCode;
+    QString username;
+    QString password;
+    QString firstName;
+    QString lastName;
+    QString nationalCode;
     int day;
     int month;
     int year;
