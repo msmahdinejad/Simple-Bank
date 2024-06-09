@@ -2,6 +2,11 @@
 #define CARDLIST_H
 
 #include <QString>
+#include <QIntValidator>
+#include <QMessageBox>
+#include <QDebug>
+#include <QtSql>
+#include <QFileInfo>
 
 template <typename T>
 class node {
@@ -20,7 +25,6 @@ private:
 public:
     cardList();
     ~cardList();
-    void loadData(QString loginUsername);
     void push_front(Z Data);
     node<Z> * getHead();
     int & getSize();
