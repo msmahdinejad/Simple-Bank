@@ -31,7 +31,11 @@ public:
     QString & getType();
     QString & getCVV2();
     int & getPass1();
-
+    int & getPass2();
+    long double & getInventory();
+    int & getDay();
+    int & getMonth();
+    int & getYear();
 };
 
 #endif // CARD_H

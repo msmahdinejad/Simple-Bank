@@ -17,18 +17,18 @@ card::card(QString user, QString cardnum, QString acountnum, QString shaba, QStr
 
 }
 
-void card::setPass1(int num){}
-void card::setPass2(int num){}
-void card::plusInventory(int num){}
-QString & card::getOwnerUsername(){}
-QString & card::getCardNumber(){}
-QString & card::getAccountNumber(){}
-QString & card::getShabaNumber(){}
-QString & card::getType(){}
-QString & card::getCVV2(){}
-int & card::getPass1(){}
-int & card::getPass2(){}
-long double & card::getInventory(){}
-int & card::getDay(){}
-int & card::getMonth(){}
-int & card::getYear(){}
+void card::setPass1(int num){pass1 = num;}
+void card::setPass2(int num){pass2 = num;}
+void card::plusInventory(int num){inventory += num;}
+QString & card::getOwnerUsername(){return ownerUsername;}
+QString & card::getCardNumber(){return cardNumber;}
+QString & card::getAccountNumber(){return accountNumber;}
+QString & card::getShabaNumber(){return shabaNumber;}
+QString & card::getType(){return type;}
+QString & card::getCVV2(){return CVV2;}
+int & card::getPass1(){return pass1;}
+int & card::getPass2(){return pass2;}
+long double & card::getInventory(){return inventory;}
+int & card::getDay(){return day;}
+int & card::getMonth(){return month;}
+int & card::getYear(){return year;}
