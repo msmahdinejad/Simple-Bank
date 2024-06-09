@@ -11,14 +11,17 @@ CONFIG += c++17
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    user.cpp \
     userwidget.cpp
 
 HEADERS += \
     mainwindow.h \
+    user.h \
     userwidget.h
 
 FORMS += \
     mainwindow.ui \
+    user.ui \
     userwidget.ui
 
 # Default rules for deployment.

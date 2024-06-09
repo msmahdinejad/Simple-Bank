@@ -2,11 +2,7 @@
 #define USERWIDGET_H
 
 #include <QMainWindow>
-#include <QIntValidator>
-#include <QMessageBox>
-#include <QDebug>
-#include <QtSql>
-#include <QFileInfo>
+#include "user.h"
 
 namespace Ui {
 class userWidget;
@@ -22,7 +18,7 @@ public:
 
 private:
     Ui::userWidget *ui;
-    QSqlDatabase DB;
+    user * currentUser;
 };
 
 #endif // USERWIDGET_H
