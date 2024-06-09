@@ -1015,7 +1015,7 @@ QLineEdit::placeholder {
         <property name="styleSheet">
          <string notr="true">/* Base style for QLineEdit */
 QLineEdit {
-    padding: 10px 15px; /* Adds internal padding for a comfortable text area */
+    padding: 5px 8px; /* Adds internal padding for a comfortable text area */
     font-size: 16px; /* Sets the font size of the text */
     border-radius: 10px; /* Rounds the corners of the QLineEdit */
     border: 0.5px solid rgba(0, 0, 0, 100); /* Sets an initial transparent border */
@@ -1115,7 +1115,7 @@ QLineEdit::placeholder {
         <property name="styleSheet">
          <string notr="true">/* Base style for QLineEdit */
 QLineEdit {
-    padding: 10px 15px; /* Adds internal padding for a comfortable text area */
+    padding: 5px 8px; /* Adds internal padding for a comfortable text area */
     font-size: 16px; /* Sets the font size of the text */
     border-radius: 10px; /* Rounds the corners of the QLineEdit */
     border: 0.5px solid rgba(0, 0, 0, 100); /* Sets an initial transparent border */

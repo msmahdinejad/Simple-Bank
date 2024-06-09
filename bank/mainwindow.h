@@ -2,6 +2,11 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QIntValidator>
+#include <QMessageBox>
+#include <QDebug>
+#include <QtSql>
+#include <QFileInfo>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,7 +22,22 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_MainLoginButton_clicked();
+
+    void on_MainSignupButton_clicked();
+
+    void on_LogInInSignUp_clicked();
+
+    void on_SignUpnInLogIn_clicked();
+
+    void on_LoginButton_clicked();
+
+private:
+    bool checkLoginInputs();
+
 private:
     Ui::MainWindow *ui;
+    QSqlDatabase DB;
 };
 #endif // MAINWINDOW_H
