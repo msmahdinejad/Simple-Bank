@@ -6,26 +6,1292 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1200</width>
+    <height>673</height>
    </rect>
   </property>
-  <property name="windowTitle">
-   <string>MainWindow</string>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <property name="minimumSize">
+   <size>
+    <width>1200</width>
+    <height>673</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1200</width>
+    <height>673</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>UI Bank</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/images/bankicon.png</normaloff>:/images/bankicon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+	
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1200</width>
+      <height>673</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="res.qrc">:/images/background.jpg</pixmap>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1201</width>
+      <height>661</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMinimumSize</enum>
+     </property>
+     <item>
+      <widget class="QWidget" name="LogInWidget" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>400</width>
+         <height>500</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QWidget {
+    background-color: rgba(111, 111, 111, 200);
+border-radius: 25px;
+}
+</string>
+       </property>
+       <widget class="QLabel" name="label_10">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>10</y>
+          <width>281</width>
+          <height>38</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    color: #000; /* Text color */
+    font-size: 25px; /* Font size */
+    font-weight: bold; /* Font weight */
+    padding: 2px; /* Padding around the text */
+    border: none; /* No border */
+    background-color: transparent; /* Transparent background */
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Log in</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>90</y>
+          <width>281</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: transparent; /* Makes the background transparent */
+    color: #ffffff; /* Sets the text color */
+    font-size: 12px; /* Sets the font size */
+    font-weight: bold; /* Makes the font bold */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the text */
+    border: none; /* Ensures there is no border */
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Username</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_7">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>195</y>
+          <width>281</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: transparent; /* Makes the background transparent */
+    color: #ffffff; /* Sets the text color */
+    font-size: 12px; /* Sets the font size */
+    font-weight: bold; /* Makes the font bold */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the text */
+    border: none; /* Ensures there is no border */
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Password</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="usernameInLogIn">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>116</y>
+          <width>281</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/* Base style for QLineEdit */
+QLineEdit {
+    padding: 10px 15px; /* Adds internal padding for a comfortable text area */
+    font-size: 16px; /* Sets the font size of the text */
+    border-radius: 10px; /* Rounds the corners of the QLineEdit */
+    border: 0.5px solid rgba(0, 0, 0, 100); /* Sets an initial transparent border */
+    background-color: rgba(255, 255, 255, 150); /* Sets the background color to white */
+    background-clip: padding-box; /* Ensures background color stays within padding */
+    background-origin: padding-box; /* Ensures background origin starts within padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a floating effect */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Style for QLineEdit when it is focused */
+QLineEdit:focus {
+    border: 3px solid #ffffff; /* Changes border color to light blue on focus */
+    box-shadow: 0 4px 10px rgba(0, 191, 255, 0.3); /* Enhances shadow to give a glowing effect on focus */
+    background-color: rgba(255, 255, 255, 200); /* Changes background color to a very light blue on focus */
+}
+
+/* Style for the placeholder text inside QLineEdit */
+QLineEdit::placeholder {
+    color: #aaa; /* Sets the placeholder text color to light gray */
+    opacity: 0.8; /* Makes the placeholder text slightly transparent */
+}
+</string>
+        </property>
+        <property name="placeholderText">
+         <string>Username</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="LoginButton">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>320</y>
+          <width>80</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>80</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgb(0, 109, 0); /* Sets the background color */
+    color: white; /* Sets the text color */
+    border-radius: 20px; /* Rounds the corners */
+    padding: 9px; /* Adds padding */
+    font-size: 16px; /* Sets the font size */
+    border: 1px solid; /* Adds a border */
+}
+
+QPushButton:hover {
+    background-color: #A90707; /* Changes background color on hover */
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Log In</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="PasswordInLogin">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>220</y>
+          <width>281</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/* Base style for QLineEdit */
+QLineEdit {
+    padding: 10px 15px; /* Adds internal padding for a comfortable text area */
+    font-size: 16px; /* Sets the font size of the text */
+    border-radius: 10px; /* Rounds the corners of the QLineEdit */
+    border: 0.5px solid rgba(0, 0, 0, 100); /* Sets an initial transparent border */
+    background-color: rgba(255, 255, 255, 150); /* Sets the background color to white */
+    background-clip: padding-box; /* Ensures background color stays within padding */
+    background-origin: padding-box; /* Ensures background origin starts within padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a floating effect */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Style for QLineEdit when it is focused */
+QLineEdit:focus {
+    border: 3px solid #ffffff; /* Changes border color to light blue on focus */
+    box-shadow: 0 4px 10px rgba(0, 191, 255, 0.3); /* Enhances shadow to give a glowing effect on focus */
+    background-color: rgba(255, 255, 255, 200); /* Changes background color to a very light blue on focus */
+}
+
+/* Style for the placeholder text inside QLineEdit */
+QLineEdit::placeholder {
+    color: #aaa; /* Sets the placeholder text color to light gray */
+    opacity: 0.8; /* Makes the placeholder text slightly transparent */
+}
+</string>
+        </property>
+        <property name="placeholderText">
+         <string>Password</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>409</y>
+          <width>91</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: transparent; /* Makes the background transparent */
+    color: #ffffff; /* Sets the text color */
+    font-size: 12px; /* Sets the font size */
+    font-weight: bold; /* Makes the font bold */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the text */
+    border: none; /* Ensures there is no border */
+}
+</string>
+        </property>
+        <property name="text">
+         <string>New to Spotify?</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="SignUpnInLogIn">
+        <property name="geometry">
+         <rect>
+          <x>229</x>
+          <y>410</y>
+          <width>90</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background: transparent; /* پس‌زمینه شفاف */
+    color: #ffffff; /* رنگ متن اصلی */
+    font-size: 12px; /* اندازه قلم */
+    font-weight: bold; /* وزن قلم */
+    border: none; /* بدون حاشیه */
+    text-decoration: none; /* بدون تزئین متن */
+    outline: none; /* بدون خط حاشیه دور روشن شدن */
+    border-bottom: 2px solid white; /* خط زیری با رنگ سفید */
+}
+
+QPushButton:hover {
+    color: #1DB954; /* تغییر رنگ متن به سبز */
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Sign Up for free</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="widget" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>300</width>
+         <height>341</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>300</width>
+         <height>341</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QWidget {
+    background-color: rgba(255, 255, 255, 150);
+border-radius: 25px;
+}
+</string>
+       </property>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>281</width>
+          <height>38</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    color: #000; /* Text color */
+    font-size: 25px; /* Font size */
+    font-weight: bold; /* Font weight */
+    padding: 2px; /* Padding around the text */
+    border: none; /* No border */
+    background-color: transparent; /* Transparent background */
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Welcome to</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_9">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>100</y>
+          <width>171</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    color: #000; /* Text color */
+    font-size: 35px; /* Font size */
+    font-weight: bold; /* Font weight */
+    padding: 2px; /* Padding around the text */
+    border: none; /* No border */
+    background-color: transparent; /* Transparent background */
+}
+</string>
+        </property>
+        <property name="text">
+         <string>UI Bank</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>90</y>
+          <width>71</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    color: #000; /* Text color */
+    font-size: 35px; /* Font size */
+    font-weight: bold; /* Font weight */
+    padding: 2px; /* Padding around the text */
+    border: none; /* No border */
+    background-color: transparent; /* Transparent background */
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="res.qrc">:/images/bankicon.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="MainLoginButton">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>220</y>
+          <width>201</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgb(0, 109, 0); /* Sets the background color */
+    color: white; /* Sets the text color */
+    border-radius: 20px; /* Rounds the corners */
+    padding: 9px; /* Adds padding */
+    font-size: 16px; /* Sets the font size */
+    border: 1px solid; /* Adds a border */
+}
+
+QPushButton:hover {
+    background-color: #A90707; /* Changes background color on hover */
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Log In</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="MainSignupButton">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>270</y>
+          <width>201</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgb(53, 107, 160); /* Sets the background color */
+    color: white; /* Sets the text color */
+    border-radius: 20px; /* Rounds the corners */
+    padding: 10px; /* Adds padding */
+    font-size: 16px; /* Sets the font size */
+    border: 1px solid; /* Adds a border */
+}
+
+QPushButton:hover {
+    background-color: #A90707; /* Changes background color on hover */
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Sign up free</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="SignUpWidget" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>400</width>
+         <height>650</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QWidget {
+    background-color: rgba(111, 111, 111, 200);
+border-radius: 25px;
+}
+</string>
+       </property>
+       <widget class="QLabel" name="label_11">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>10</y>
+          <width>281</width>
+          <height>38</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    color: #000; /* Text color */
+    font-size: 25px; /* Font size */
+    font-weight: bold; /* Font weight */
+    padding: 2px; /* Padding around the text */
+    border: none; /* No border */
+    background-color: transparent; /* Transparent background */
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Sign up</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="usernamInSignUp">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>90</y>
+          <width>281</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/* Base style for QLineEdit */
+QLineEdit {
+    padding: 10px 15px; /* Adds internal padding for a comfortable text area */
+    font-size: 16px; /* Sets the font size of the text */
+    border-radius: 10px; /* Rounds the corners of the QLineEdit */
+    border: 0.5px solid rgba(0, 0, 0, 100); /* Sets an initial transparent border */
+    background-color: rgba(255, 255, 255, 150); /* Sets the background color to white */
+    background-clip: padding-box; /* Ensures background color stays within padding */
+    background-origin: padding-box; /* Ensures background origin starts within padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a floating effect */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Style for QLineEdit when it is focused */
+QLineEdit:focus {
+    border: 3px solid #ffffff; /* Changes border color to light blue on focus */
+    box-shadow: 0 4px 10px rgba(0, 191, 255, 0.3); /* Enhances shadow to give a glowing effect on focus */
+    background-color: rgba(255, 255, 255, 200); /* Changes background color to a very light blue on focus */
+}
+
+/* Style for the placeholder text inside QLineEdit */
+QLineEdit::placeholder {
+    color: #aaa; /* Sets the placeholder text color to light gray */
+    opacity: 0.8; /* Makes the placeholder text slightly transparent */
+}
+</string>
+        </property>
+        <property name="placeholderText">
+         <string>Username</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_12">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>140</y>
+          <width>281</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: transparent; /* Makes the background transparent */
+    color: #ffffff; /* Sets the text color */
+    font-size: 12px; /* Sets the font size */
+    font-weight: bold; /* Makes the font bold */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the text */
+    border: none; /* Ensures there is no border */
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Password</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="passwordInSignUp">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>165</y>
+          <width>281</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/* Base style for QLineEdit */
+QLineEdit {
+    padding: 10px 15px; /* Adds internal padding for a comfortable text area */
+    font-size: 16px; /* Sets the font size of the text */
+    border-radius: 10px; /* Rounds the corners of the QLineEdit */
+    border: 0.5px solid rgba(0, 0, 0, 100); /* Sets an initial transparent border */
+    background-color: rgba(255, 255, 255, 150); /* Sets the background color to white */
+    background-clip: padding-box; /* Ensures background color stays within padding */
+    background-origin: padding-box; /* Ensures background origin starts within padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a floating effect */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Style for QLineEdit when it is focused */
+QLineEdit:focus {
+    border: 3px solid #ffffff; /* Changes border color to light blue on focus */
+    box-shadow: 0 4px 10px rgba(0, 191, 255, 0.3); /* Enhances shadow to give a glowing effect on focus */
+    background-color: rgba(255, 255, 255, 200); /* Changes background color to a very light blue on focus */
+}
+
+/* Style for the placeholder text inside QLineEdit */
+QLineEdit::placeholder {
+    color: #aaa; /* Sets the placeholder text color to light gray */
+    opacity: 0.8; /* Makes the placeholder text slightly transparent */
+}
+</string>
+        </property>
+        <property name="placeholderText">
+         <string>Password</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_13">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>64</y>
+          <width>281</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: transparent; /* Makes the background transparent */
+    color: #ffffff; /* Sets the text color */
+    font-size: 12px; /* Sets the font size */
+    font-weight: bold; /* Makes the font bold */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the text */
+    border: none; /* Ensures there is no border */
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Username</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="firstName">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>245</y>
+          <width>281</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/* Base style for QLineEdit */
+QLineEdit {
+    padding: 10px 15px; /* Adds internal padding for a comfortable text area */
+    font-size: 16px; /* Sets the font size of the text */
+    border-radius: 10px; /* Rounds the corners of the QLineEdit */
+    border: 0.5px solid rgba(0, 0, 0, 100); /* Sets an initial transparent border */
+    background-color: rgba(255, 255, 255, 150); /* Sets the background color to white */
+    background-clip: padding-box; /* Ensures background color stays within padding */
+    background-origin: padding-box; /* Ensures background origin starts within padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a floating effect */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Style for QLineEdit when it is focused */
+QLineEdit:focus {
+    border: 3px solid #ffffff; /* Changes border color to light blue on focus */
+    box-shadow: 0 4px 10px rgba(0, 191, 255, 0.3); /* Enhances shadow to give a glowing effect on focus */
+    background-color: rgba(255, 255, 255, 200); /* Changes background color to a very light blue on focus */
+}
+
+/* Style for the placeholder text inside QLineEdit */
+QLineEdit::placeholder {
+    color: #aaa; /* Sets the placeholder text color to light gray */
+    opacity: 0.8; /* Makes the placeholder text slightly transparent */
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>First Name</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_17">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>220</y>
+          <width>281</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: transparent; /* Makes the background transparent */
+    color: #ffffff; /* Sets the text color */
+    font-size: 12px; /* Sets the font size */
+    font-weight: bold; /* Makes the font bold */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the text */
+    border: none; /* Ensures there is no border */
+}
+</string>
+        </property>
+        <property name="text">
+         <string>First Name</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_18">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>295</y>
+          <width>281</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: transparent; /* Makes the background transparent */
+    color: #ffffff; /* Sets the text color */
+    font-size: 12px; /* Sets the font size */
+    font-weight: bold; /* Makes the font bold */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the text */
+    border: none; /* Ensures there is no border */
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Last Name</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lastName">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>320</y>
+          <width>281</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/* Base style for QLineEdit */
+QLineEdit {
+    padding: 10px 15px; /* Adds internal padding for a comfortable text area */
+    font-size: 16px; /* Sets the font size of the text */
+    border-radius: 10px; /* Rounds the corners of the QLineEdit */
+    border: 0.5px solid rgba(0, 0, 0, 100); /* Sets an initial transparent border */
+    background-color: rgba(255, 255, 255, 150); /* Sets the background color to white */
+    background-clip: padding-box; /* Ensures background color stays within padding */
+    background-origin: padding-box; /* Ensures background origin starts within padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a floating effect */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Style for QLineEdit when it is focused */
+QLineEdit:focus {
+    border: 3px solid #ffffff; /* Changes border color to light blue on focus */
+    box-shadow: 0 4px 10px rgba(0, 191, 255, 0.3); /* Enhances shadow to give a glowing effect on focus */
+    background-color: rgba(255, 255, 255, 200); /* Changes background color to a very light blue on focus */
+}
+
+/* Style for the placeholder text inside QLineEdit */
+QLineEdit::placeholder {
+    color: #aaa; /* Sets the placeholder text color to light gray */
+    opacity: 0.8; /* Makes the placeholder text slightly transparent */
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>Last Name</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_19">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>375</y>
+          <width>281</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: transparent; /* Makes the background transparent */
+    color: #ffffff; /* Sets the text color */
+    font-size: 12px; /* Sets the font size */
+    font-weight: bold; /* Makes the font bold */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the text */
+    border: none; /* Ensures there is no border */
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Last Name</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="nationalCode">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>400</y>
+          <width>281</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/* Base style for QLineEdit */
+QLineEdit {
+    padding: 10px 15px; /* Adds internal padding for a comfortable text area */
+    font-size: 16px; /* Sets the font size of the text */
+    border-radius: 10px; /* Rounds the corners of the QLineEdit */
+    border: 0.5px solid rgba(0, 0, 0, 100); /* Sets an initial transparent border */
+    background-color: rgba(255, 255, 255, 150); /* Sets the background color to white */
+    background-clip: padding-box; /* Ensures background color stays within padding */
+    background-origin: padding-box; /* Ensures background origin starts within padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a floating effect */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Style for QLineEdit when it is focused */
+QLineEdit:focus {
+    border: 3px solid #ffffff; /* Changes border color to light blue on focus */
+    box-shadow: 0 4px 10px rgba(0, 191, 255, 0.3); /* Enhances shadow to give a glowing effect on focus */
+    background-color: rgba(255, 255, 255, 200); /* Changes background color to a very light blue on focus */
+}
+
+/* Style for the placeholder text inside QLineEdit */
+QLineEdit::placeholder {
+    color: #aaa; /* Sets the placeholder text color to light gray */
+    opacity: 0.8; /* Makes the placeholder text slightly transparent */
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>National Code</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_20">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>460</y>
+          <width>281</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: transparent; /* Makes the background transparent */
+    color: #ffffff; /* Sets the text color */
+    font-size: 12px; /* Sets the font size */
+    font-weight: bold; /* Makes the font bold */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the text */
+    border: none; /* Ensures there is no border */
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Date of Birth</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="year">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>480</y>
+          <width>71</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/* Base style for QLineEdit */
+QLineEdit {
+    padding: 10px 15px; /* Adds internal padding for a comfortable text area */
+    font-size: 16px; /* Sets the font size of the text */
+    border-radius: 10px; /* Rounds the corners of the QLineEdit */
+    border: 0.5px solid rgba(0, 0, 0, 100); /* Sets an initial transparent border */
+    background-color: rgba(255, 255, 255, 150); /* Sets the background color to white */
+    background-clip: padding-box; /* Ensures background color stays within padding */
+    background-origin: padding-box; /* Ensures background origin starts within padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a floating effect */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Style for QLineEdit when it is focused */
+QLineEdit:focus {
+    border: 3px solid #ffffff; /* Changes border color to light blue on focus */
+    box-shadow: 0 4px 10px rgba(0, 191, 255, 0.3); /* Enhances shadow to give a glowing effect on focus */
+    background-color: rgba(255, 255, 255, 200); /* Changes background color to a very light blue on focus */
+}
+
+/* Style for the placeholder text inside QLineEdit */
+QLineEdit::placeholder {
+    color: #aaa; /* Sets the placeholder text color to light gray */
+    opacity: 0.8; /* Makes the placeholder text slightly transparent */
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>Year</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="month">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>480</y>
+          <width>71</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/* Base style for QLineEdit */
+QLineEdit {
+    padding: 5px 8px; /* Adds internal padding for a comfortable text area */
+    font-size: 16px; /* Sets the font size of the text */
+    border-radius: 10px; /* Rounds the corners of the QLineEdit */
+    border: 0.5px solid rgba(0, 0, 0, 100); /* Sets an initial transparent border */
+    background-color: rgba(255, 255, 255, 150); /* Sets the background color to white */
+    background-clip: padding-box; /* Ensures background color stays within padding */
+    background-origin: padding-box; /* Ensures background origin starts within padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a floating effect */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Style for QLineEdit when it is focused */
+QLineEdit:focus {
+    border: 3px solid #ffffff; /* Changes border color to light blue on focus */
+    box-shadow: 0 4px 10px rgba(0, 191, 255, 0.3); /* Enhances shadow to give a glowing effect on focus */
+    background-color: rgba(255, 255, 255, 200); /* Changes background color to a very light blue on focus */
+}
+
+/* Style for the placeholder text inside QLineEdit */
+QLineEdit::placeholder {
+    color: #aaa; /* Sets the placeholder text color to light gray */
+    opacity: 0.8; /* Makes the placeholder text slightly transparent */
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>Month</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="day">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>480</y>
+          <width>71</width>
+          <height>45</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/* Base style for QLineEdit */
+QLineEdit {
+    padding: 10px 15px; /* Adds internal padding for a comfortable text area */
+    font-size: 16px; /* Sets the font size of the text */
+    border-radius: 10px; /* Rounds the corners of the QLineEdit */
+    border: 0.5px solid rgba(0, 0, 0, 100); /* Sets an initial transparent border */
+    background-color: rgba(255, 255, 255, 150); /* Sets the background color to white */
+    background-clip: padding-box; /* Ensures background color stays within padding */
+    background-origin: padding-box; /* Ensures background origin starts within padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a floating effect */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Style for QLineEdit when it is focused */
+QLineEdit:focus {
+    border: 3px solid #ffffff; /* Changes border color to light blue on focus */
+    box-shadow: 0 4px 10px rgba(0, 191, 255, 0.3); /* Enhances shadow to give a glowing effect on focus */
+    background-color: rgba(255, 255, 255, 200); /* Changes background color to a very light blue on focus */
+}
+
+/* Style for the placeholder text inside QLineEdit */
+QLineEdit::placeholder {
+    color: #aaa; /* Sets the placeholder text color to light gray */
+    opacity: 0.8; /* Makes the placeholder text slightly transparent */
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>Day</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_28">
+        <property name="geometry">
+         <rect>
+          <x>124</x>
+          <y>610</y>
+          <width>143</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background: transparent; /* Makes the background transparent */
+    color: #ffffff; /* Sets the text color */
+    font-size: 12px; /* Sets the font size */
+    font-weight: bold; /* Makes the font bold */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the text */
+    border: none; /* Ensures there is no border */
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Already have an account?</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="SignUpBotton">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>550</y>
+          <width>99</width>
+          <height>42</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgb(53, 107, 160); /* Sets the background color */
+    color: white; /* Sets the text color */
+    border-radius: 20px; /* Rounds the corners */
+    padding: 9px; /* Adds padding */
+    font-size: 16px; /* Sets the font size */
+    border: 1px solid; /* Adds a border */
+}
+
+QPushButton:hover {
+    background-color: #A90707; /* Changes background color on hover */
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Sign Up</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="LogInInSignUp">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>609</y>
+          <width>36</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background: transparent; /* پس‌زمینه شفاف */
+    color: #ffffff; /* رنگ متن اصلی */
+    font-size: 12px; /* اندازه قلم */
+    font-weight: bold; /* وزن قلم */
+    border: none; /* بدون حاشیه */
+    text-decoration: none; /* بدون تزئین متن */
+    outline: none; /* بدون خط حاشیه دور روشن شدن */
+    border-bottom: 2px solid white; /* خط زیری با رنگ سفید */
+}
+
+QPushButton:hover {
+    color: #1DB954; /* تغییر رنگ متن به سبز */
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Log In</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1200</width>
      <height>17</height>
     </rect>
    </property>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <tabstops>
+  <tabstop>MainLoginButton</tabstop>
+  <tabstop>MainSignupButton</tabstop>
+  <tabstop>usernameInLogIn</tabstop>
+  <tabstop>PasswordInLogin</tabstop>
+  <tabstop>LoginButton</tabstop>
+  <tabstop>SignUpnInLogIn</tabstop>
+  <tabstop>usernamInSignUp</tabstop>
+  <tabstop>passwordInSignUp</tabstop>
+  <tabstop>firstName</tabstop>
+  <tabstop>lastName</tabstop>
+  <tabstop>nationalCode</tabstop>
+  <tabstop>year</tabstop>
+  <tabstop>month</tabstop>
+  <tabstop>day</tabstop>
+  <tabstop>SignUpBotton</tabstop>
+  <tabstop>LogInInSignUp</tabstop>
+  <tabstop>user_5</tabstop>
+  <tabstop>user_6</tabstop>
+  <tabstop>signupButton_2</tabstop>
+  <tabstop>pushButton_3</tabstop>
+  <tabstop>loginButton_2</tabstop>
+  <tabstop>user_10</tabstop>
+  <tabstop>user_11</tabstop>
+  <tabstop>user_12</tabstop>
+  <tabstop>user_13</tabstop>
+  <tabstop>user_14</tabstop>
+  <tabstop>pushButton_5</tabstop>
+  <tabstop>pushButton_4</tabstop>
+  <tabstop>loginButton</tabstop>
+  <tabstop>pushButton_2</tabstop>
+  <tabstop>signupButton</tabstop>
+ </tabstops>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
  <connections/>
 </ui>
