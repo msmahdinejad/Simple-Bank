@@ -93,6 +93,7 @@ void MainWindow::on_LoginButton_clicked()
         userWidget * UW = new userWidget(ui->usernameInLogIn->text());
         UW->show();
         this->hide();
+        DB.close();
     }
 }
 
