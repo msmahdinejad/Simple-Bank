@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "userwidget.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -70,14 +71,13 @@ bool MainWindow::checkLoginInputs()
         QMessageBox::critical(this, "Error", query.lastError().text());
         return false;
     }
-    QSqlRecord record = query.record();
+    //QSqlRecord record = query.record();
     if (!query.next())
     {
         QMessageBox::critical(this, "Error", "Username not found!");
         return false;
     }
-    QString DBUsername = record.value("username").toString();
-    QString DBPassword = record.value("password").toString();
+    QString DBPassword = query.value(1).toString();
     if(password != DBPassword)
     {
         QMessageBox::critical(this, "Error", "Password is not correct");
@@ -90,11 +90,13 @@ void MainWindow::on_LoginButton_clicked()
 {
     if(checkLoginInputs())
     {
-
+        userWidget * UW = new userWidget(ui->usernameInLogIn->text());
+        UW->show();
+        this->hide();
     }
 }
 
-bool MainWindow::checkSigninInputs()
+bool MainWindow::checkSignupInputs()
 {
     QString user, pass, first, last, code, day, month, year;
     user = ui->usernamInSignUp->text();
@@ -180,7 +182,7 @@ bool MainWindow::checkSigninInputs()
 
 void MainWindow::on_SignUpBotton_clicked()
 {
-    if(checkSigninInputs())
+    if(checkSignupInputs())
     {
         QSqlQuery query;
         query.prepare("INSERT INTO users (username, password, firstname, lastname, nationalcode, "

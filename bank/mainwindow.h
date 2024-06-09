@@ -37,7 +37,7 @@ private slots:
 
 private:
     bool checkLoginInputs();
-    bool checkSigninInputs();
+    bool checkSignupInputs();
 
 private:
     Ui::MainWindow *ui;
