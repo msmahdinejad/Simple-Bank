@@ -33,8 +33,11 @@ private slots:
 
     void on_LoginButton_clicked();
 
+    void on_SignUpBotton_clicked();
+
 private:
     bool checkLoginInputs();
+    bool checkSigninInputs();
 
 private:
     Ui::MainWindow *ui;
