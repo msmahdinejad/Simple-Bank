@@ -26,9 +26,14 @@ public:
     void refreshCards();
     cardList<card> * loadData();
     void loadWidget();
+    void showCardMore(card * selectedCard);
 
 private slots:
     void on_pushButton_clicked();
+
+    void on_pass1Edit_clicked();
+
+    void on_pass2Edit_clicked();
 
 private:
     Ui::cardWidget *ui;

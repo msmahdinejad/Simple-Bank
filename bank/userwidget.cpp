@@ -9,6 +9,7 @@ userWidget::userWidget(QString loginUsername, QWidget *parent)
     currentUser = new user(loginUsername);
     currentCardWidget = new cardWidget(currentUser, loginUsername);
     setCentralWidget(currentCardWidget);
+    showMaximized();
 }
 
 userWidget::~userWidget()

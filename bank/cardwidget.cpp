@@ -12,6 +12,29 @@ cardWidget::cardWidget(user * user, QString loginUser, QWidget *parent)
     ui->setupUi(this);
     cards = loadData();
     loadWidget();
+    //ui->scrollLayOut->setAlignment(Qt::AlignTop);
+    ui->moreWidget->hide();
+    QIntValidator *validatorPass1 = new QIntValidator(1000, 9999, ui->pass1);
+    ui->pass1->setValidator(validatorPass1);
+    QIntValidator *validatorPass2 = new QIntValidator(10000, 99999, ui->pass2);
+    ui->pass2->setValidator(validatorPass2);
+}
+
+void cardWidget::showCardMore(card * selectedCard)
+{
+    ui->moreWidget->show();
+    ui->name->setText(selectedCard->getFirstName() + " " + selectedCard->getLastName());
+    ui->card->setText(selectedCard->getCardNumber());
+    ui->acc->setText(selectedCard->getAccountNumber());
+    ui->shaba->setText(selectedCard->getShabaNumber());
+    ui->type->setText(selectedCard->getType());
+    ui->cvv2->setText(selectedCard->getCVV2());
+    ui->pass1->setText(QString::fromStdString(std::to_string(selectedCard->getPass1())));
+    ui->pass2->setText(QString::fromStdString(std::to_string(selectedCard->getPass2())));
+    ui->inventoy->setText(QString::fromStdString(std::to_string(selectedCard->getInventory())));
+    ui->day->setText(QString::fromStdString(std::to_string(selectedCard->getDay())));
+    ui->month->setText(QString::fromStdString(std::to_string(selectedCard->getMonth())));
+    ui->year->setText(QString::fromStdString(std::to_string(selectedCard->getYear())));
 }
 
 cardWidget::~cardWidget()
@@ -41,7 +64,7 @@ void cardWidget::loadWidget()
     node<card> * tmp = cards->getHead();
     while(tmp != 0)
     {
-        card_w * cardW = new card_w(tmp->getData());
+        card_w * cardW = new card_w(this, tmp->getData());
         ui->scrollLayOut->addWidget(cardW);
         tmp = tmp->getNext();
     }
@@ -94,5 +117,63 @@ void cardWidget::on_pushButton_clicked()
 {
     newCard * tmp = new newCard(myUser, this);
     tmp->show();
+}
+
+
+void cardWidget::on_pass1Edit_clicked()
+{
+    if(ui->pass1->text().toInt() >= 1000 && ui->pass1->text().toInt() <= 9999)
+    {
+        QSqlDatabase DB = QSqlDatabase::addDatabase("QSQLITE");
+        DB.setDatabaseName("C:/saleh/UNI/AP/Bank/uiap-sec-mini-project-msmahdinejad/Data.db");
+        if(!DB.open())
+            qDebug() << "DB in updateCard page failed!";
+        else
+            qDebug() << "DB in updateCard page opened!";
+        QSqlQuery query;
+        query.prepare("UPDATE cards SET pass1 = ? WHERE cardnumber = ?");
+        query.addBindValue(ui->pass1->text());
+        query.addBindValue(ui->card->text());
+        if (!query.exec())
+        {
+            qDebug() << query.lastError().text();
+        }
+        else
+        {
+            qDebug() << "card updated succecfully";
+            QMessageBox::information(this, "Success", "Update was succefully!");
+        }
+        DB.close();
+        refreshCards();
+    }
+}
+
+
+void cardWidget::on_pass2Edit_clicked()
+{
+    if(ui->pass2->text().toInt() >= 10000 && ui->pass2->text().toInt() <= 99999)
+    {
+        QSqlDatabase DB = QSqlDatabase::addDatabase("QSQLITE");
+        DB.setDatabaseName("C:/saleh/UNI/AP/Bank/uiap-sec-mini-project-msmahdinejad/Data.db");
+        if(!DB.open())
+            qDebug() << "DB in updateCard page failed!";
+        else
+            qDebug() << "DB in updateCard page opened!";
+        QSqlQuery query;
+        query.prepare("UPDATE cards SET pass2 = ? WHERE cardnumber = ?");
+        query.addBindValue(ui->pass2->text());
+        query.addBindValue(ui->card->text());
+        if (!query.exec())
+        {
+            qDebug() << query.lastError().text();
+        }
+        else
+        {
+            qDebug() << "card updated succecfully";
+            QMessageBox::information(this, "Success", "Update was succefully!");
+        }
+        DB.close();
+        refreshCards();
+    }
 }
 

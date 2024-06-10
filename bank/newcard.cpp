@@ -10,6 +10,10 @@ newCard::newCard(user * user, cardWidget * Parent, QWidget *parent)
     ui->setupUi(this);
     ui->type_2->addItems({"سپرده", "جاری", "قرض الحسنه"});
     ui->type_2->setCurrentIndex(0);
+    QIntValidator *validatorPass = new QIntValidator(1000, 9999, ui->Password);
+    ui->Password->setValidator(validatorPass);
+    QIntValidator *validatorInventory = new QIntValidator(10000, 100000000000000, ui->inventory);
+    ui->inventory->setValidator(validatorInventory);
 }
 
 newCard::~newCard()
