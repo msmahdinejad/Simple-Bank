@@ -27,6 +27,7 @@ public:
     cardList<card> * loadData();
     void loadWidget();
     void showCardMore(card * selectedCard);
+    cardList<card> * getCards();
 
 private slots:
     void on_pushButton_clicked();

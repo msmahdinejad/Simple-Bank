@@ -30,6 +30,10 @@ private:
     int day;
     int month;
     int year;
+    int lastDay;
+    int lastHour;
+    int lastMin;
+    int sumTransfers;
 
 public:
     explicit user(QString loginUsername, QWidget *parent = nullptr);
@@ -37,7 +41,10 @@ public:
     QString & getUsername();
     QString & getLastName();
     QString & getFirstName();
-
+    int & getLastDay();
+    int & getSumTransfers();
+    void setLastDay(int num);
+    void setSumTransfers(int num);
 private slots:
     void on_pushButton_clicked();
 

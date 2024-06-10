@@ -32,3 +32,9 @@ void userWidget::on_radioButton_2_clicked()
     ui->stackedWidget->setCurrentIndex(1);
 }
 
+void userWidget::on_pushButton_clicked()
+{
+    Treanfer * currentTransfer = new Treanfer(currentUser, currentCardWidget);
+    currentTransfer->show();
+}
+
