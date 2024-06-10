@@ -3,5 +3,10 @@
         <file>images/background.jpg</file>
         <file>images/bankicon.png</file>
         <file>images/bankicon2.png</file>
+        <file>images/credit-card.png</file>
+        <file>images/credit-card2.png</file>
+        <file>images/home.png</file>
+        <file>images/home2.png</file>
+        <file>images/logout.png</file>
     </qresource>
 </RCC>

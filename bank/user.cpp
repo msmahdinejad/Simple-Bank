@@ -1,10 +1,12 @@
 #include "user.h"
 #include "ui_user.h"
+#include "mainwindow.h"
 
 user::user(QString loginUsername, QWidget *parent)
     : QWidget(parent)
     , username(loginUsername)
     , ui(new Ui::user)
+    , parent(parent)
 {
     ui->setupUi(this);
     DB = QSqlDatabase::addDatabase("QSQLITE");
@@ -39,6 +41,17 @@ user::user(QString loginUsername, QWidget *parent)
         qDebug() << "user profile loaded succefully!";
     }
     DB.close();
+
+
+    ui->first->setText(firstName);
+    ui->last->setText(lastName);
+    ui->code->setText(nationalCode);
+    ui->day->setText(QString::fromStdString(std::to_string(day)));
+    ui->month->setText(QString::fromStdString(std::to_string(month)));
+    ui->year->setText(QString::fromStdString(std::to_string(year)));
+    ui->username->setText(loginUsername);
+    ui->password->setText(password);
+
 }
 
 QString & user::getUsername(){return username;}
@@ -49,3 +62,11 @@ user::~user()
 {
     delete ui;
 }
+
+void user::on_pushButton_clicked()
+{
+    MainWindow * tmp = new MainWindow();
+    tmp->show();
+    parent->close();
+}
+

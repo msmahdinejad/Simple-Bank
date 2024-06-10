@@ -9,6 +9,7 @@
 #include <QtSql>
 #include <QFileInfo>
 #include <bits/stdc++.h>
+//#include "userwidget.h"
 
 using namespace std;
 
@@ -37,9 +38,14 @@ public:
     QString & getLastName();
     QString & getFirstName();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::user *ui;
     QSqlDatabase DB;
+    //userWidget * Parent;
+    QWidget *parent;
 };
 
 #endif // USER_H

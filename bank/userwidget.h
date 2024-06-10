@@ -17,6 +17,11 @@ public:
     explicit userWidget(QString loginUsername, QWidget *parent = nullptr);
     ~userWidget();
 
+private slots:
+    void on_radioButton_clicked();
+
+    void on_radioButton_2_clicked();
+
 private:
     Ui::userWidget *ui;
     user * currentUser;
