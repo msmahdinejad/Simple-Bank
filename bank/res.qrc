@@ -8,5 +8,6 @@
         <file>images/home.png</file>
         <file>images/home2.png</file>
         <file>images/logout.png</file>
+        <file>images/money.png</file>
     </qresource>
 </RCC>

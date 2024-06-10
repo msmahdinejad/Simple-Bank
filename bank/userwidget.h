@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "user.h"
 #include "cardwidget.h"
+#include "treanfer.h"
 
 namespace Ui {
 class userWidget;
@@ -21,6 +22,8 @@ private slots:
     void on_radioButton_clicked();
 
     void on_radioButton_2_clicked();
+
+    void on_pushButton_clicked();
 
 private:
     Ui::userWidget *ui;

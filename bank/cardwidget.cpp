@@ -20,6 +20,8 @@ cardWidget::cardWidget(user * user, QString loginUser, QWidget *parent)
     ui->pass2->setValidator(validatorPass2);
 }
 
+cardList<card> * cardWidget::getCards(){return cards;}
+
 void cardWidget::showCardMore(card * selectedCard)
 {
     ui->moreWidget->show();
@@ -44,6 +46,7 @@ cardWidget::~cardWidget()
 
 void cardWidget::refreshCards()
 {
+    ui->moreWidget->hide();
     cards->deleteCards();
     cards = loadData();
     loadWidget();

@@ -16,6 +16,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     newcard.cpp \
+    treanfer.cpp \
     user.cpp \
     userwidget.cpp
 
@@ -26,6 +27,7 @@ HEADERS += \
     cardwidget.h \
     mainwindow.h \
     newcard.h \
+    treanfer.h \
     user.h \
     userwidget.h
 
@@ -34,6 +36,7 @@ FORMS += \
     cardwidget.ui \
     mainwindow.ui \
     newcard.ui \
+    treanfer.ui \
     user.ui \
     userwidget.ui
 
