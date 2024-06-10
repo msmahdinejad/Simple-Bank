@@ -38,6 +38,10 @@ user::user(QString loginUsername, QWidget *parent)
         day = query.value(5).toInt();
         month = query.value(6).toInt();
         year = query.value(7).toInt();
+        lastDay = query.value(8).toInt();
+        lastHour = query.value(9).toInt();
+        lastMin = query.value(10).toInt();
+        sumTransfers = query.value(11).toInt();
         qDebug() << "user profile loaded succefully!";
     }
     DB.close();
@@ -70,3 +74,7 @@ void user::on_pushButton_clicked()
     parent->close();
 }
 
+int & user::getLastDay(){return lastDay;}
+int & user::getSumTransfers(){return sumTransfers;}
+void user::setLastDay(int num){lastDay = num;}
+void user::setSumTransfers(int num){sumTransfers = num;}

@@ -82,6 +82,15 @@ bool Treanfer::checkInputs()
                 }
                 else
                 {
+                    std::tm now = getCurrentTime();
+                    if(getDay(now) == Sender->getLastDay())
+                    {
+                        if(Sender->getSumTransfers() > 6000000)
+                        {
+                            QMessageBox::critical(this, "Error", "maximum Transfer in a day is 6000000!");
+                            return false;
+                        }
+                    }
                     return true;
                 }
             }
@@ -92,6 +101,15 @@ bool Treanfer::checkInputs()
     {
         QMessageBox::critical(this, "Error", "Pass is wronge!");
         return false;
+    }
+    std::tm now = getCurrentTime();
+    if(getDay(now) == Sender->getLastDay())
+    {
+        if(Sender->getSumTransfers() > 6000000)
+        {
+            QMessageBox::critical(this, "Error", "maximum Transfer in a day is 6000000!");
+            return false;
+        }
     }
     return true;
 }
@@ -134,6 +152,23 @@ void Treanfer::on_pushButton_2_clicked()
         reply = QMessageBox::question(this, "confirmation", tmp,
                                       QMessageBox::Yes | QMessageBox::No);
         if (reply == QMessageBox::Yes) {
+            std::tm now = getCurrentTime();
+            if(getDay(now) == Sender->getLastDay())
+            {
+                if(Sender->getSumTransfers() > 6000000)
+                {
+                    QMessageBox::critical(this, "Error", "maximum Transfer in a day is 6000000!");
+                }
+                else
+                {
+                    Sender->setSumTransfers(Sender->getSumTransfers() + ui->amount->text().toInt());
+                }
+            }
+            else
+            {
+                Sender->setLastDay(getDay(now));
+                Sender->setSumTransfers(ui->amount->text().toInt());
+            }
             QSqlDatabase DB = QSqlDatabase::addDatabase("QSQLITE");
             DB.setDatabaseName("C:/saleh/UNI/AP/Bank/uiap-sec-mini-project-msmahdinejad/Data.db");
             if(!DB.open())
@@ -148,6 +183,11 @@ void Treanfer::on_pushButton_2_clicked()
             query2.prepare("UPDATE cards SET inventory = ? WHERE cardnumber = ?");
             query2.addBindValue(senderInventory - ui->amount->text().toDouble());
             query2.addBindValue(ui->sender->currentText());
+            QSqlQuery query3;
+            query3.prepare("UPDATE users SET lastday = ?, sumtransfers = ? WHERE username = ?");
+            query3.addBindValue(Sender->getLastDay());
+            query3.addBindValue(Sender->getSumTransfers());
+            query3.addBindValue(Sender->getUsername());
             if (!query.exec() || !query2.exec())
             {
                 qDebug() << query.lastError().text();
