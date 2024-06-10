@@ -87,6 +87,8 @@ private:
     QString PooyaPass;
     double senderInventory;
     double Inventory;
+    bool check1 = false;
+    bool check2 = false;
 };
 
 #endif // TREANFER_H

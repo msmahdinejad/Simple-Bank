@@ -85,11 +85,19 @@ bool Treanfer::checkInputs()
                     std::tm now = getCurrentTime();
                     if(getDay(now) == Sender->getLastDay())
                     {
-                        if(Sender->getSumTransfers() > 6000000)
+                        if(Sender->getSumTransfers() + ui->amount->text().toInt() > 6000000)
                         {
                             QMessageBox::critical(this, "Error", "maximum Transfer in a day is 6000000!");
                             return false;
                         }
+                        else
+                        {
+                            check1 = true;
+                        }
+                    }
+                    else
+                    {
+                        check2 = true;
                     }
                     return true;
                 }
@@ -105,11 +113,19 @@ bool Treanfer::checkInputs()
     std::tm now = getCurrentTime();
     if(getDay(now) == Sender->getLastDay())
     {
-        if(Sender->getSumTransfers() > 6000000)
+        if(Sender->getSumTransfers() + ui->amount->text().toInt() > 6000000)
         {
             QMessageBox::critical(this, "Error", "maximum Transfer in a day is 6000000!");
             return false;
         }
+        else
+        {
+            check1 = true;
+        }
+    }
+    else
+    {
+        check2 = true;
     }
     return true;
 }
@@ -153,18 +169,11 @@ void Treanfer::on_pushButton_2_clicked()
                                       QMessageBox::Yes | QMessageBox::No);
         if (reply == QMessageBox::Yes) {
             std::tm now = getCurrentTime();
-            if(getDay(now) == Sender->getLastDay())
+            if(check1)
             {
-                if(Sender->getSumTransfers() > 6000000)
-                {
-                    QMessageBox::critical(this, "Error", "maximum Transfer in a day is 6000000!");
-                }
-                else
-                {
                     Sender->setSumTransfers(Sender->getSumTransfers() + ui->amount->text().toInt());
-                }
             }
-            else
+            else if (check2)
             {
                 Sender->setLastDay(getDay(now));
                 Sender->setSumTransfers(ui->amount->text().toInt());
@@ -188,7 +197,7 @@ void Treanfer::on_pushButton_2_clicked()
             query3.addBindValue(Sender->getLastDay());
             query3.addBindValue(Sender->getSumTransfers());
             query3.addBindValue(Sender->getUsername());
-            if (!query.exec() || !query2.exec())
+            if (!query.exec() || !query2.exec() || !query3.exec())
             {
                 qDebug() << query.lastError().text();
             }
