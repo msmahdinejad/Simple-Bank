@@ -9,7 +9,7 @@ card_w::card_w(card * Card ,QWidget *parent)
     ui->setupUi(this);
     ui->cvv2->setText(myCard->getCVV2());
     ui->cardnum->setText(myCard->getCardNumber());
-
+    ui->username->setText(myCard->getFirstName() + " " + myCard->getLastName());
 }
 
 card_w::~card_w()

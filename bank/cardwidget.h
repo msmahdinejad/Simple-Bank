@@ -23,7 +23,8 @@ public:
     explicit cardWidget(QString loginUser, QWidget *parent = nullptr);
     ~cardWidget();
     cardList<card> * loadData();
-
+    void loadWidget();
+    void refreshCards();
 private:
     Ui::cardWidget *ui;
     QString loginUsername;

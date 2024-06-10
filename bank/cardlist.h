@@ -46,6 +46,7 @@ private:
 public:
     cardList();
     ~cardList();
+    void deleteCards();
     void push_front(Z * Data);
     node<Z> * getHead();
     int & getSize();
@@ -62,7 +63,20 @@ template <typename Z> cardList<Z>::~cardList()
         delete tmp;
         tmp = tmp2;
     }
-    this->h = nullptr ;
+    this->head = nullptr ;
+    this->size = 0 ;
+}
+template <typename Z> void cardList<Z>::deleteCards()
+{
+    node<Z> * tmp = this->head;
+
+    while(tmp != 0)
+    {
+        node<Z> * tmp2 = tmp->getNext();
+        delete tmp;
+        tmp = tmp2;
+    }
+    this->head = nullptr ;
     this->size = 0 ;
 }
 template <typename Z> void cardList<Z>::push_front(Z * Data)

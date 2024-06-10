@@ -1,6 +1,8 @@
 #include "card.h"
 
-card::card(QString user, QString cardnum, QString acountnum, QString shaba, QString type, QString cvv2, int pass1, int pass2, long double in, int day, int month, int year)
+card::card(QString user, QString cardnum, QString acountnum, QString shaba, QString type, QString cvv2, int pass1, int pass2, long double in, int day, int month, int year,
+           QString firstName,
+           QString lastName)
     : ownerUsername(user)
     , cardNumber(cardnum)
     , accountNumber(acountnum)
@@ -13,6 +15,8 @@ card::card(QString user, QString cardnum, QString acountnum, QString shaba, QStr
     , day(day)
     , month(month)
     , year(year)
+    , firstName(firstName)
+    , lastName(lastName)
 {
 
 }
@@ -32,3 +36,5 @@ long double & card::getInventory(){return inventory;}
 int & card::getDay(){return day;}
 int & card::getMonth(){return month;}
 int & card::getYear(){return year;}
+QString & card::getFirstName(){return firstName;}
+QString & card::getLastName(){return lastName;}

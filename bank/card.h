@@ -18,9 +18,13 @@ private:
     int day;
     int month;
     int year;
+    QString firstName;
+    QString lastName;
 
 public:
-    card(QString user, QString cardnum, QString acountnum, QString shaba, QString type, QString cvv2, int pass1, int pass2, long double in, int day, int month, int year);
+    card(QString user, QString cardnum, QString acountnum, QString shaba, QString type, QString cvv2, int pass1, int pass2, long double in, int day, int month, int year,
+         QString firstName,
+         QString lastName);
     void setPass1(int num);
     void setPass2(int num);
     void plusInventory(int num);
@@ -36,6 +40,8 @@ public:
     int & getDay();
     int & getMonth();
     int & getYear();
+    QString & getFirstName();
+    QString & getLastName();
 };
 
 #endif // CARD_H

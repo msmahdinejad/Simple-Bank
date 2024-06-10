@@ -1,5 +1,6 @@
 #include "cardwidget.h"
 #include "ui_cardwidget.h"
+#include "card_w.h"
 
 cardWidget::cardWidget(QString loginUser, QWidget *parent)
     : QWidget(parent)
@@ -8,12 +9,36 @@ cardWidget::cardWidget(QString loginUser, QWidget *parent)
 {
     ui->setupUi(this);
     cards = loadData();
-
+    loadWidget();
 }
 
 cardWidget::~cardWidget()
 {
     delete ui;
+}
+
+void cardWidget::refreshCards()
+{
+    cards->deleteCards();
+    cards = loadData();
+    loadWidget();
+}
+
+void cardWidget::loadWidget()
+{
+    while (QLayoutItem* item = ui->scrollLayOut->takeAt(0)) {
+        if (QWidget* widget = item->widget()) {
+            widget->deleteLater(); // حذف ویجت
+        }
+        delete item; // حذف آیتم
+    }
+    node<card> * tmp = cards->getHead();
+    while(tmp != 0)
+    {
+        card_w * cardW = new card_w(tmp->getData());
+        ui->scrollLayOut->addWidget(cardW);
+        tmp = tmp->getNext();
+    }
 }
 
 cardList<card> * cardWidget::loadData()
@@ -47,7 +72,9 @@ cardList<card> * cardWidget::loadData()
             int day = query.value(9).toInt();
             int month = query.value(10).toInt();
             int year = query.value(11).toInt();
-            card * temp = new card(ownerUsername, cardNumber, accountNumber, shabaNumber, type, CVV2, pass1, pass2, inventory, day, month, year);
+            QString firstName = query.value(12).toString();
+            QString lastName = query.value(13).toString();
+            card * temp = new card(ownerUsername, cardNumber, accountNumber, shabaNumber, type, CVV2, pass1, pass2, inventory, day, month, year, firstName, lastName);
             myCardList->push_front(temp);
             qDebug() << "card loaded succefully!";
         }
