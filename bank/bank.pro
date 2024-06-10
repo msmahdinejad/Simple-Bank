@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     card.cpp \
+    card_w.cpp \
     cardlist.cpp \
     cardwidget.cpp \
     main.cpp \
@@ -19,6 +20,7 @@ SOURCES += \
 
 HEADERS += \
     card.h \
+    card_w.h \
     cardlist.h \
     cardwidget.h \
     mainwindow.h \
@@ -26,6 +28,7 @@ HEADERS += \
     userwidget.h
 
 FORMS += \
+    card_w.ui \
     cardwidget.ui \
     mainwindow.ui \
     user.ui \
