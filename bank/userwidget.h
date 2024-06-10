@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "user.h"
+#include "cardwidget.h"
 
 namespace Ui {
 class userWidget;
@@ -19,6 +20,7 @@ public:
 private:
     Ui::userWidget *ui;
     user * currentUser;
+    cardWidget * currentCardWidget;
 };
 
 #endif // USERWIDGET_H

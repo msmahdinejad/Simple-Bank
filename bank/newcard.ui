@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>newCard</class>
+ <widget class="QMainWindow" name="newCard">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>240</width>
+    <height>367</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>221</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+    background-color: rgba(0, 0, 0, 150);
+border-radius: 25px;
+}
+</string>
+    </property>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>270</y>
+       <width>99</width>
+       <height>42</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #1DB954;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+QPushButton:hover {
+    background-color: #A90707;
+}
+
+QPushButton:pressed {
+    background-color: #0b6623;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>ADD</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="type_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>181</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* Base style for QComboBox */
+QComboBox {
+    padding: 10px 10px; /* Adds internal padding for a comfortable text area */
+    font-size: 16px; /* Sets the font size of the text */
+    border-radius: 10px; /* Rounds the corners of the QComboBox */
+    border: 0.5px solid rgba(0, 0, 0, 100); /* Sets an initial transparent border */
+    background-color: rgba(255, 255, 255, 150); /* Sets the background color to white */
+    background-clip: padding-box; /* Ensures background color stays within padding */
+    background-origin: padding-box; /* Ensures background origin starts within padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a floating effect */
+    selection-background-color: rgba(255, 255, 255, 200); /* Sets selection background color */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Style for QComboBox when it is dropped down */
+QComboBox::drop-down {
+    border: none; /* No border for the drop-down arrow */
+}
+
+/* Style for QComboBox when it is focused */
+QComboBox:focus {
+    border: 3px solid #ffffff; /* Changes border color to light blue on focus */
+    box-shadow: 0 4px 10px rgba(0, 191, 255, 0.3); /* Enhances shadow to give a glowing effect on focus */
+    background-color: rgba(255, 255, 255, 200); /* Changes background color to a very light blue on focus */
+}
+
+/* Style for the placeholder text inside QComboBox */
+QComboBox::placeholder {
+    color: #aaa; /* Sets the placeholder text color to light gray */
+    opacity: 0.8; /* Makes the placeholder text slightly transparent */
+    /* Center-align the placeholder text */
+    text-align: center;
+    /* Vertically center the placeholder text */
+    padding-top: 6px;
+}
+
+/* Center the drop-down arrow */
+QComboBox::down-arrow {
+    image: url(path_to_down_arrow_icon.png); /* Customize down arrow icon */
+    width: 20px; /* Width of the down arrow icon */
+    height: 20px; /* Height of the down arrow icon */
+    subcontrol-origin: padding; /* Position the arrow relative to the padding */
+    subcontrol-position: center right; /* Position the arrow at the center right */
+}
+
+/* Style for the QComboBox dropdown menu */
+QComboBox QAbstractItemView {
+    color: white; /* Set text color to white */
+    background-color: rgba(0, 0, 0, 100); /* Set background color to black */
+    border: 1px solid #fff; /* Set border to a white solid line */
+    border-radius: 0; /* Ensure border radius is 0 for square corners */
+}
+QComboBox::placeholder {
+    color: #aaa; /* Sets the placeholder text color to light gray */
+    opacity: 0.8; /* Makes the placeholder text slightly transparent */
+}</string>
+     </property>
+     <property name="editable">
+      <bool>false</bool>
+     </property>
+     <property name="currentText">
+      <string/>
+     </property>
+     <property name="currentIndex">
+      <number>-1</number>
+     </property>
+     <property name="placeholderText">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>281</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background: transparent; /* Makes the background transparent */
+    color: #ffffff; /* Sets the text color */
+    font-size: 12px; /* Sets the font size */
+    font-weight: bold; /* Makes the font bold */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the text */
+    border: none; /* Ensures there is no border */
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Account type</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Password">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>120</y>
+       <width>181</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* Base style for QLineEdit */
+QLineEdit {
+    padding: 10px 15px; /* Adds internal padding for a comfortable text area */
+    font-size: 16px; /* Sets the font size of the text */
+    border-radius: 10px; /* Rounds the corners of the QLineEdit */
+    border: 0.5px solid rgba(0, 0, 0, 100); /* Sets an initial transparent border */
+    background-color: rgba(255, 255, 255, 150); /* Sets the background color to white */
+    background-clip: padding-box; /* Ensures background color stays within padding */
+    background-origin: padding-box; /* Ensures background origin starts within padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a floating effect */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Style for QLineEdit when it is focused */
+QLineEdit:focus {
+    border: 3px solid #ffffff; /* Changes border color to light blue on focus */
+    box-shadow: 0 4px 10px rgba(0, 191, 255, 0.3); /* Enhances shadow to give a glowing effect on focus */
+    background-color: rgba(255, 255, 255, 200); /* Changes background color to a very light blue on focus */
+}
+
+/* Style for the placeholder text inside QLineEdit */
+QLineEdit::placeholder {
+    color: #aaa; /* Sets the placeholder text color to light gray */
+    opacity: 0.8; /* Makes the placeholder text slightly transparent */
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Pass</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_19">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>100</y>
+       <width>281</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background: transparent; /* Makes the background transparent */
+    color: #ffffff; /* Sets the text color */
+    font-size: 12px; /* Sets the font size */
+    font-weight: bold; /* Makes the font bold */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the text */
+    border: none; /* Ensures there is no border */
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Pass</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_20">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>180</y>
+       <width>281</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    background: transparent; /* Makes the background transparent */
+    color: #ffffff; /* Sets the text color */
+    font-size: 12px; /* Sets the font size */
+    font-weight: bold; /* Makes the font bold */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the text */
+    border: none; /* Ensures there is no border */
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Inventory</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="inventory">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>200</y>
+       <width>181</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* Base style for QLineEdit */
+QLineEdit {
+    padding: 10px 15px; /* Adds internal padding for a comfortable text area */
+    font-size: 16px; /* Sets the font size of the text */
+    border-radius: 10px; /* Rounds the corners of the QLineEdit */
+    border: 0.5px solid rgba(0, 0, 0, 100); /* Sets an initial transparent border */
+    background-color: rgba(255, 255, 255, 150); /* Sets the background color to white */
+    background-clip: padding-box; /* Ensures background color stays within padding */
+    background-origin: padding-box; /* Ensures background origin starts within padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a floating effect */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Style for QLineEdit when it is focused */
+QLineEdit:focus {
+    border: 3px solid #ffffff; /* Changes border color to light blue on focus */
+    box-shadow: 0 4px 10px rgba(0, 191, 255, 0.3); /* Enhances shadow to give a glowing effect on focus */
+    background-color: rgba(255, 255, 255, 200); /* Changes background color to a very light blue on focus */
+}
+
+/* Style for the placeholder text inside QLineEdit */
+QLineEdit::placeholder {
+    color: #aaa; /* Sets the placeholder text color to light gray */
+    opacity: 0.8; /* Makes the placeholder text slightly transparent */
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Inventory</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>240</width>
+     <height>17</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

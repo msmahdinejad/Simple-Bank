@@ -38,8 +38,12 @@ user::user(QString loginUsername, QWidget *parent)
         year = query.value(7).toInt();
         qDebug() << "user profile loaded succefully!";
     }
-
+    DB.close();
 }
+
+QString & user::getUsername(){return username;}
+QString & user::getLastName(){return lastName;}
+QString & user::getFirstName(){return firstName;}
 
 user::~user()
 {
