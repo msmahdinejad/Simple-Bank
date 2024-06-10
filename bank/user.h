@@ -33,6 +33,9 @@ private:
 public:
     explicit user(QString loginUsername, QWidget *parent = nullptr);
     ~user();
+    QString & getUsername();
+    QString & getLastName();
+    QString & getFirstName();
 
 private:
     Ui::user *ui;

@@ -1,11 +1,13 @@
 #include "cardwidget.h"
 #include "ui_cardwidget.h"
 #include "card_w.h"
+#include "newcard.h"
 
-cardWidget::cardWidget(QString loginUser, QWidget *parent)
+cardWidget::cardWidget(user * user, QString loginUser, QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::cardWidget)
     , loginUsername(loginUser)
+    , myUser(user)
 {
     ui->setupUi(this);
     cards = loadData();
@@ -31,6 +33,10 @@ void cardWidget::loadWidget()
             widget->deleteLater(); // حذف ویجت
         }
         delete item; // حذف آیتم
+    }
+    if(cards->getSize() == 5)
+    {
+        ui->pushButton->hide();
     }
     node<card> * tmp = cards->getHead();
     while(tmp != 0)
@@ -79,6 +85,14 @@ cardList<card> * cardWidget::loadData()
             qDebug() << "card loaded succefully!";
         }
     }
+    DB.close();
     return myCardList;
+}
+
+
+void cardWidget::on_pushButton_clicked()
+{
+    newCard * tmp = new newCard(myUser, this);
+    tmp->show();
 }
 

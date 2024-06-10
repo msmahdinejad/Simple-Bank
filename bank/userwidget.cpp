@@ -7,7 +7,8 @@ userWidget::userWidget(QString loginUsername, QWidget *parent)
 {
     ui->setupUi(this);
     currentUser = new user(loginUsername);
-    currentCardWidget = new cardWidget(loginUsername);
+    currentCardWidget = new cardWidget(currentUser, loginUsername);
+    setCentralWidget(currentCardWidget);
 }
 
 userWidget::~userWidget()

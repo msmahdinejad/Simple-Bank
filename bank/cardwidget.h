@@ -10,6 +10,7 @@
 
 #include "cardlist.h"
 #include "card.h"
+#include "user.h"
 
 namespace Ui {
 class cardWidget;
@@ -20,15 +21,20 @@ class cardWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit cardWidget(QString loginUser, QWidget *parent = nullptr);
+    explicit cardWidget(user * user, QString loginUser, QWidget *parent = nullptr);
     ~cardWidget();
+    void refreshCards();
     cardList<card> * loadData();
     void loadWidget();
-    void refreshCards();
+
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::cardWidget *ui;
     QString loginUsername;
     cardList<card> * cards;
+    user * myUser;
 };
 
 #endif // CARDWIDGET_H
