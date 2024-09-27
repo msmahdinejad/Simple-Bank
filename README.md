@@ -35,7 +35,7 @@ These experiences significantly enhanced my problem-solving abilities and provid
 
 - **Home**:
   
-  <img src="readme-media/Home.png" width="45%" />
+  <img src="readme-media/Home.png" width="35%" />
 
 - **Card Management**:
   
