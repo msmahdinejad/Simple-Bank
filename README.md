@@ -29,8 +29,8 @@ These experiences significantly enhanced my problem-solving abilities and provid
 - **Login Page**:
   
   <p float="left">
-  <img src="readme-media/Login1.png" width="45%" />
-  <img src="readme-media/Login2.png" width="45%" />
+  <img src="readme-media/Login1.png" width="65%" />
+  <img src="readme-media/Login2.png" width="65%" />
 </p>
 
 - **Home**:
