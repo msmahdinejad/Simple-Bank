@@ -27,18 +27,18 @@ These experiences significantly enhanced my problem-solving abilities and provid
 ### Preview
 
 - **Login Page**:
-- 
+  
   <p float="left">
   <img src="readme-media/Login1.png" width="45%" />
   <img src="readme-media/Login2.png" width="45%" />
 </p>
 
 - **Home**:
-- 
-  ![Home](readme-media/Home.png)
+  
+  <img src="readme-media/Home.png" width="45%" />
 
 - **Card Management**:
-- 
+  
   <p float="left">
   <img src="readme-media/Cards1.png" width="30%" />
   <img src="readme-media/Cards2.png" width="30%" />
@@ -46,8 +46,8 @@ These experiences significantly enhanced my problem-solving abilities and provid
 </p>
 
 - **Transfer**:
-- 
-  ![Transfer](readme-media/Transfer.png)
+  
+  <img src="readme-media/Transfer.png" width="45%" />
 
 ---
 
