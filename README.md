@@ -47,8 +47,8 @@ These experiences significantly enhanced my problem-solving abilities and provid
 
 - **Transfer**:
   
-  <img src="readme-media/Transfer.png" width="45%" />
+  <img src="readme-media/Transfer.png" width="30%" />
 
 ---
 
-This was my first experience working with databases, graphics, version control systems like Git, and more, which proved to be extremely beneficial for my learning journey.
+This was my first experience working with databases, graphics, version control systems like Git, and more, which proved to be extremely beneficial for my learning journey...
