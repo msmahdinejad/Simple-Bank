@@ -333,7 +333,7 @@ QLineEdit::placeholder {
 </string>
         </property>
         <property name="text">
-         <string>New to Spotify?</string>
+         <string>New to Bank?</string>
         </property>
        </widget>
        <widget class="QPushButton" name="SignUpnInLogIn">
@@ -1274,21 +1274,6 @@ QPushButton:hover {
   <tabstop>day</tabstop>
   <tabstop>SignUpBotton</tabstop>
   <tabstop>LogInInSignUp</tabstop>
-  <tabstop>user_5</tabstop>
-  <tabstop>user_6</tabstop>
-  <tabstop>signupButton_2</tabstop>
-  <tabstop>pushButton_3</tabstop>
-  <tabstop>loginButton_2</tabstop>
-  <tabstop>user_10</tabstop>
-  <tabstop>user_11</tabstop>
-  <tabstop>user_12</tabstop>
-  <tabstop>user_13</tabstop>
-  <tabstop>user_14</tabstop>
-  <tabstop>pushButton_5</tabstop>
-  <tabstop>pushButton_4</tabstop>
-  <tabstop>loginButton</tabstop>
-  <tabstop>pushButton_2</tabstop>
-  <tabstop>signupButton</tabstop>
  </tabstops>
  <resources>
   <include location="res.qrc"/>
